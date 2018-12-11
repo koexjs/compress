@@ -1,10 +1,10 @@
 {
-  "name": "@zcorky/koa-compress",
+  "name": "@koex/compress",
   "version": "0.0.1",
-  "description": "compress for koa",
+  "description": "compress for koa extend",
   "main": "lib/index.js",
   "module": "lib/index.js",
-  "repository": "https://github.com/zcorky/koa-compress",
+  "repository": "https://github.com/koexjs/compress",
   "author": "Zero",
   "license": "MIT",
   "scripts": {
@@ -20,6 +20,7 @@
     "@types/node": "^10.9.4",
     "@types/statuses": "^1.3.0",
     "coveralls": "^3.0.2",
+    "husky": "^1.2.0",
     "koa": "^2.6.2",
     "mocha": "^5.2.0",
     "nyc": "^13.1.0",
@@ -36,6 +37,11 @@
   "files": [
     "lib/"
   ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
+  },
   "nyc": {
     "check-coverage": true,
     "lines": 60,
@@ -59,7 +65,6 @@
     "access": "public"
   },
   "dependencies": {
-    "bytes": "^3.0.0",
     "compressible": "^2.0.15",
     "koa-is-json": "^1.0.0",
     "statues": "^1.0.0-alpha1"
