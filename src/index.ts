@@ -32,7 +32,7 @@ const encodingMethods = {
 export default (options?: Options): Middleware => {
   const { compressible = _compressible, threshold = 1024 } = options || {} as Options;
 
-  return async function compress(ctx: Context, next: () => Promise<void>) {
+  return async function koexCompress(ctx: Context, next: () => Promise<void>) {
     ctx.vary('Accept-Encoding');
 
     await next();

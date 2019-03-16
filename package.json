@@ -1,6 +1,6 @@
 {
   "name": "@koex/compress",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "compress for koa extend",
   "main": "lib/index.js",
   "module": "lib/index.js",
